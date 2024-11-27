@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu mẫu thông tin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #787777;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+        }
+        input[type="file"] {
+            padding: 5px;
+        }
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 4px;
+            width: 100px;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(6, 187, 6);
+        }
+        .checkbox-group, .radio-group {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get"></form>
+        <h1>Biểu mẫu thông tin</h1>
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="fullname" name="name" placeholder="Nhập họ và tên của bạn" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+        
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" minlength="8" placeholder="Nhập mật khẩu của bạn" required>
+        
+        <label for="date">Ngày sinh:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <div class="radio-group">
+            <lable style="font-weight: bold;">Giới tính:</lable><br>
+            <label><input type="radio" id="male" name="gender" value="Nam" required> Nam</label>
+            <label><input type="radio" id="female" name="gender" value="Nữ"> Nữ</label>
+        </div>
+        
+        <div class="checkbox-group">
+            <label>Sở thích:</label>
+            <label><input type="checkbox" id="reading" name="hobby" value="Đọc sách">Đọc sách</label>
+            <label><input type="checkbox" id="traveling" name="hobby" value="Du lịch">Du lịch</label>
+            <label><input type="checkbox" id="music" name="hobby" value="Nghe nhạc">Nghe nhạc</label>
+        </div>
+        
+        <label for="avatar">Tải lên ảnh đại diện:</label>
+        <input type="file" id="avatar" name="avatar" accept="image/*">
+        
+        <input type="submit" value="Gửi">
+    </form>
+</body>
+</html>
