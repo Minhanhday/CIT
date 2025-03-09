@@ -1,0 +1,114 @@
+//ktr nguyen duong
+function isPositiveInteger(n) {
+    return n > 0 && Number.isInteger(n);
+}
+
+console.log(isPositiveInteger(10)); // true
+console.log(isPositiveInteger(-5)); // false
+console.log(isPositiveInteger(4.5)); // false
+
+//ktr nguyen am
+function isNegativeInteger(n) {
+    return n < 0 && Number.isInteger(n);
+}
+
+console.log(isNegativeInteger(-7)); // true
+console.log(isNegativeInteger(3)); // false
+console.log(isNegativeInteger(-3.5)); // false
+
+//tong 2 so
+function sum(a, b) {
+    return a + b;
+}
+
+console.log(sum(5, 3)); // 8
+console.log(sum(-2, 4)); // 2
+
+//giai pt bac 1
+function solveLinearEquation(a, b) {
+    if (a === 0) {
+        return b === 0 ? "Phương trình có vô số nghiệm" : "Phương trình vô nghiệm";
+    }
+    return -b / a;
+}
+
+console.log(solveLinearEquation(2, -4)); // 2
+console.log(solveLinearEquation(0, 0)); // Phương trình có vô số nghiệm
+console.log(solveLinearEquation(0, 5)); // Phương trình vô nghiệm
+
+//ktra so nguyen to
+function isPrime(n) {
+    if (n < 2) return false;
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return false;
+    }
+    return true;
+}
+
+console.log(isPrime(7)); // true
+console.log(isPrime(10)); // false
+
+//ktra so chinh phuong
+function isPerfectSquare(n) {
+    return n >= 0 && Number.isInteger(Math.sqrt(n));
+}
+
+console.log(isPerfectSquare(16)); // true
+console.log(isPerfectSquare(10)); // false
+
+//bt1
+let num = 10; // Number
+let str = "Hello"; // String
+let isTrue = true; // Boolean
+let arr = [1, 2, 3]; // Array
+let obj = { name: "John", age: 25 }; // Object
+
+//bt2
+let a = 10, b = 5;
+console.log("Tổng:", a + b);
+console.log("Hiệu:", a - b);
+console.log("Tích:", a * b);
+console.log("Thương:", a / b);
+
+//bt3
+function addNumbers(a, b) {
+    return a + b;
+}
+console.log(addNumbers(3, 7)); // 10
+
+//bt4
+function isEven(n) {
+    return n % 2 === 0;
+}
+console.log(isEven(4)); // true
+console.log(isEven(7)); // false
+
+//bt5
+function checkGreaterThanTen(n) {
+    if (n > 10) {
+        console.log("Số lớn hơn 10");
+    } else {
+        console.log("Số không lớn hơn 10");
+    }
+}
+
+checkGreaterThanTen(15); // Số lớn hơn 10
+checkGreaterThanTen(8);  // Số không lớn hơn 10
+
+//bt6
+function getDayOfWeek(day) {
+    switch (day) {
+        case 1: return "Chủ Nhật";
+        case 2: return "Thứ Hai";
+        case 3: return "Thứ Ba";
+        case 4: return "Thứ Tư";
+        case 5: return "Thứ Năm";
+        case 6: return "Thứ Sáu";
+        case 7: return "Thứ Bảy";
+        default: return "Số không hợp lệ!";
+    }
+}
+
+console.log(getDayOfWeek(3)); // Thứ Ba
+console.log(getDayOfWeek(7)); // Thứ Bảy
+console.log(getDayOfWeek(8)); // Số không hợp lệ!
